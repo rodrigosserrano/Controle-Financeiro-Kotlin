@@ -14,11 +14,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.controlefinanceiro.data.domain.Transaction
 import com.example.controlefinanceiro.ui.theme.toCurrency
 
 @Composable
-fun AverageCard(transaction: Transaction, viewModel: OverviewViewModel = viewModel()) {
+fun AverageCard(transaction: OverviewViewModel.TotalTransaction, viewModel: OverviewViewModel = viewModel()) {
     Card (
         elevation = CardDefaults.cardElevation(4.dp),
         modifier = Modifier.fillMaxWidth(),

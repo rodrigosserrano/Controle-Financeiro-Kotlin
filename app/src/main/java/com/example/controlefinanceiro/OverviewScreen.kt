@@ -126,9 +126,6 @@ private fun SpendingCard(
     }
 }
 
-/**
- * TODO: Não funciona de maneira correta (deveria mostrar gastos por categoria), ajustar funcionalidade.
- */
 @Composable
 fun AveragePerCategory(viewModel: OverviewViewModel = viewModel()){
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -146,7 +143,7 @@ fun AveragePerCategory(viewModel: OverviewViewModel = viewModel()){
                 bottom = 16.dp
             ),
         ) {
-            items(uiState.transactions) {transaction ->
+            items(uiState.totalTransactions) {transaction ->
                 AverageCard(transaction)
             }
         }
